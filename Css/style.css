@@ -1,0 +1,937 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --laranja: #F76211;
+    --escuro: #1C1511;
+    --branco: #FFFFFF;
+    --cinza: #f5f5f5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #F76211, #1C1511);
+    z-index: 1000;
+    /*overflow: visible;*/
+}
+ .menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 0 20px;
+}
+
+.logoUniFilTech {
+    height: 150px;
+    width: auto;
+    position: relative;
+    top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    margin-top: 70px;
+    background: url('../Img/Reitor\ e\ Bolsistas.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(247, 98, 17, 0.85),
+        rgba(28, 21, 17, 0.9)
+    );
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 700px;
+    margin-left: 80px;
+     padding: 50px;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.btn-cta {
+    margin-top: 30px;
+    padding: 20px 60px;
+    font-size: 20px;
+    background: #d9d9d9;
+    color: #7a2d0a;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btn-cta a{
+    text-decoration: none;
+    color: #7a4020;
+    font-weight: bold;
+}
+
+.secao {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cinza {
+    background: var(--cinza);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--escuro);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--branco);
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    width: 280px;
+}
+
+
+.lista {
+    list-style: none;
+    font-size: 18px;
+}
+
+.lista li {
+    margin: 10px 0;
+}
+
+.texto {
+    max-width: 700px;
+    margin: auto;
+    color: #444;
+    font-size: 18px;
+}
+
+
+
+.destaques-topo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, #1C1511, #F76211);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+
+.sobre-premium {
+    background: #efebe5;
+    padding: 40px 40px;
+}
+
+.sobre-texto {
+    font-size: 16px;
+    max-width: 900px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.sobre-texto h2 {
+    margin: 15px 0;
+    font-size: 34px;
+    color: #F76211 ;
+    line-height: 1.4;
+}
+
+.sobre-texto p {
+    font-size: 22px;
+    color: var(--laranja);
+}
+
+.cards-premium {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card-premium {
+    grid-column: span 3;
+
+    background: linear-gradient(to bottom, #F76211, #c94d0d);
+    color: white;
+    padding: 35px 30px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+
+.card-premium:nth-child(5) {
+    grid-column: 2 / span 3;
+}
+
+.card-premium:nth-child(6) {
+    grid-column: 5 / span 3;
+}
+
+.card-premium:nth-child(7) {
+    grid-column: 8 / span 3;
+}
+
+.card-premium:hover {
+    transform: translateY(-10px);
+}
+
+.card-premium i {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.card-premium h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card-premium p {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+.sessao-G7 {
+    min-height: 100vh;
+    background: 
+        linear-gradient(to right, rgba(247,98,17,0.85), rgba(38,25,17,0.9)),
+        url("../Img/Textura UniFil Tech.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.titulo-G7 {
+    color: white;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.card-G7 {
+    background: white;
+    border-radius: 20px;
+    width: 650px;
+    max-width: 90%;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+}
+
+.card-G7:hover {
+    transform: scale(1.02);
+}
+.card-img-G5 {
+    width: 100%;
+    height: auto;
+}
+
+.card-img-G5 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block; 
+}
+.texto-G7 {
+    margin-top: 30px;
+    max-width: 750px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    line-height: 1.6;
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+
+
+
+#planos {
+    background: #efebe5;
+    padding: 60px 20px 80px; 
+}
+
+.titulo-planos {
+    max-width: 1100px;
+    margin: 0 0 40px 10px;
+    text-align: left;
+     padding-left: 20px;
+}
+
+.titulo-planos h2 {
+    font-size: 36px;
+     color: #F66211;
+    line-height: 1.4;
+     text-align: left;
+}
+
+#planos .cards {
+    gap: 50px;
+    margin-top: 20px; 
+}
+
+#planos .card {
+    color: white;
+    border-radius: 25px;
+    padding: 40px 20px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+#planos .card:hover {
+    transform: translateY(-10px);
+}
+
+#planos .card img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+#planos .card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#planos .card p {
+    background: white;
+    color: var(--laranja);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.card-empresa {
+    background: linear-gradient(to bottom, #F66211, #90390A);
+}
+
+.card-startup {
+    background: linear-gradient(to bottom, #F66211, #8F390A);
+}
+
+.Area-beneficios {
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    background: 
+        linear-gradient(to right, rgba(247,98,17,0.85), rgba(38,25,17,0.9)),
+        url("../Img/Textura UniFil Tech.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.benificios {
+    margin-bottom: 40px;
+    font-size: 24px;
+    text-decoration: none;
+    color: rgb(213, 192, 192);
+}
+
+.lista_beneficios {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.lista_beneficios i {
+    font-size: 30px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.lista_beneficios li {
+    margin-bottom: 40px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.lista_beneficios li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lista_beneficios h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.lista_beneficios p {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+
+.startupsincubados {
+    padding: 80px 20px;
+    background: #efebe5;
+    text-align: center;
+}
+
+.startupsincubados h2 {
+    font-size: 36px;
+    color: #F76211;
+    margin-bottom: 40px;
+}
+/*
+.grid-startupsincubados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}*/
+
+.grid-startupsincubados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-startupincubados {
+    background: #ffffff;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+.card-startupincubados img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: 0.3s;
+}
+
+
+.card-startupincubados.logo img {
+    width: auto;
+    height: auto;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.info-startupincubados {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.6));
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-startupincubados:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card-startupincubados.logo:hover img {
+    transform: scale(1); 
+    opacity: 0.3;
+}
+.info-startupincubados h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.info-startupincubados p {
+    font-size: 15px;
+    line-height: 1.5;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+}
+.card-startupincubados:hover .info-startupincubados {
+    opacity: 1;
+}
+
+.info-startupincubados {
+    z-index: 2;
+}
+
+
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    color: white;
+    font-size: 18px;
+    margin: 0 8px;
+}
+
+.btn-vermais {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #F76211;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+.card-startupincubados.logo {
+    background: #f5f5f5; 
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+}
+
+#modal-titulo {
+    color: #F76211; 
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.fechar {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.area-historico {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.fotos-historico {
+    flex: 1; 
+    height: 450px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.fotos-historico img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fotos-historico img.active {
+    opacity: 1;
+}
+
+.fotos-historico {
+    margin-bottom: 40px;
+}
+
+.UniFilTech-historia {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.primeiro-texto,
+.segundo-texto,
+.terceiro-texto {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.UniFilTech-historia p{
+      margin-bottom: 20px;
+      color: #90390A;
+}
+
+.UniFilTech-historia h2{
+    text-align: left;
+    margin-bottom: 20px;
+    color: #F76211 ;
+}
+
+.secao-historico{
+    padding: 92px 20px 0px;
+    text-align: left; 
+    background: #efebe5;
+}
+
+.footer {
+    background: linear-gradient(to right, #1C1511, #F76211);
+    color: white;
+    padding: 5px 20px;
+    
+}
+
+/*
+footer {
+    background: var(--escuro);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}*/
+
+
+.footer-container {
+    width: 100%;
+    padding: 20px 10px 0;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    align-items: start; 
+    column-gap: 80px;
+}
+
+.logo-footer {
+    height: 130px;
+    width: auto;
+ 
+}
+.redes-sociais,
+.contato-footer {
+   display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.redes-sociais h3 {
+    margin-bottom: 5px;
+}
+
+.redes-sociais a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.redes-sociais i {
+    margin-right: 8px;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.contato-footer {
+    text-align: center;
+}
+
+.contato-footer p {
+    margin: 6px 0;
+    font-size: 16px;
+     transition: 0.3s;
+}
+
+.contato-footer i {
+    margin-right: 8px;
+}
+
+.curiosidades-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.curiosidades-footer h3 {
+    margin-bottom: 5px;
+}
+
+.curiosidades-footer a {
+    color: white;
+    text-decoration: none;
+    margin: 6px 0;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.curiosidades-footer a:hover,
+.redes-sociais a:hover {
+    color: #d9c4be;
+}
+.desenvolvimento p{
+  text-align: center;
+  font-size: small;
+  margin: 10px 0;
+}
+
+@media (max-width: 1024px) {
+    .cards-premium {
+        grid-template-columns: 1fr;
+    }
+
+    .card-premium,
+    .card-premium:nth-child(5),
+    .card-premium:nth-child(6),
+    .card-premium:nth-child(7) {
+        grid-column: span 1;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .cards-premium {
+        grid-template-columns: 1fr;
+    }
+
+    .card-premium {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .area-historico {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .fotos-historico {
+        width: 100%;
+        height: auto; 
+        aspect-ratio: 16 / 10; 
+    }
+
+    .fotos-historico img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .UniFilTech-historia {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .UniFilTech-historia h2 {
+        text-align: center;
+    }
+
+    .UniFilTech-historia p {
+        text-align: justify;
+    }
+
+}
+
+    @media (max-width: 768px){
+
+            .footer-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .contato-footer {
+            text-align: center;
+        }
+
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        nav ul {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            background: #1C1511;
+
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+            display: none; 
+        }
+
+        nav ul.active {
+            display: flex; 
+            background: linear-gradient(to right, #F76211, #1C1511);
+        }
+
+
+        #planos .cards {
+            flex-direction: column;
+            align-items: center;
+         }
+
+        .card-startupincubados {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto; 
+            padding: 0px;
+        }
+
+         .card-startupincubados.logo img{
+                object-fit: contain;
+                max-width: 80%;
+                max-height: 80%;
+            }
+
+        .card-startupincubados img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+       .grid-startupsincubados{
+        grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+
+         .footer-container {
+            text-align: center;
+            gap: 30px;
+        }
+    }
+        .hero-content {
+            margin-left: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 28px;        
+        }
+
+
+    
+   /* .lista_beneficios li:nth-child(1){
+        animation-delay: 0.2s;
+    }
+
+    .lista_beneficios li:nth-child(2) {
+        animation-delay: 0.4s;
+    }
+
+    .lista_beneficios li:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+
+    .lista_beneficios li:nth-child(4) {
+        animation-delay: 0.8s;
+    }*/
