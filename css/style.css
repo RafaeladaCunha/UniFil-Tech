@@ -67,7 +67,7 @@ nav a {
     position: relative;
     height: 100vh;
     margin-top: 70px;
-    background: url('../Img/Reitor\ e\ Bolsistas.jpg') center/cover no-repeat;
+    background: url('../img/Reitor\ e\ Bolsistas.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
 }
